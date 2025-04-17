@@ -3,7 +3,7 @@ El dataset que vamos a usar una combinación del dataset WikiArt.
 * Cuenta con 119527 cuadros.
 * Cada cuadro viene con sus respectivos autores y sus estilos a los que pertenecen. 
 
-**Citación**
+## **Citación**
 @article{artgan2018,
   title={Improved ArtGAN for Conditional Synthesis of Natural Image and Artwork},
   author={Tan, Wei Ren and Chan, Chee Seng and Aguirre, Hernan and Tanaka, Kiyoshi},
