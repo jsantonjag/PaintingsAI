@@ -1,7 +1,7 @@
 ## **Wikiart Dataset (COMPLETE)**
 El [dataset](structured_dataset.csv) que vamos a usar una combinación del dataset WikiArt.
 * Cuenta con 119527 cuadros.
-* Cada cuadro viene con sus respectivos autores y sus estilos a los que pertenecen. 
+* Cada cuadro viene con su respectivo autor y su estilo al que pertenece. 
 
 ## **Citación**
 @article{artgan2018,
