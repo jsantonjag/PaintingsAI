@@ -11,6 +11,6 @@ Este proyecto entrena una red neuronal para analizar imágenes de cuadros y pred
 
 ## 🛠️ Tecnologías utilizadas
 * Python
-* TensorFlow, Pytorch
+* Pytorch (torch.nn, torchvision, torchvision.transforms,...)
 * Numpy, Pandas
-* Matplotlib, Seaborn
+* Matplotlib
