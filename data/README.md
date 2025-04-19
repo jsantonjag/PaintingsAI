@@ -3,6 +3,9 @@ El [dataset](structured_dataset.csv) que vamos a usar una combinación del datas
 * Cuenta con 10.000 cuadros. (Originalmente el dataset tiene 119.527 cuadros)
 * Cada cuadro viene con su respectivo autor y el estilo al que pertenece. 
 
+Además hemos descargado las imágenes que vienen en el dataset. 
+
+
 ## **Citación**
 @article{artgan2018,
   title={Improved ArtGAN for Conditional Synthesis of Natural Image and Artwork},
