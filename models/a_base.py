@@ -44,7 +44,7 @@ script_dir = os.path.dirname(os.path.abspath("1001_images"))
 
 # Ruta a la carpeta de imágenes que está en el mismo lugar que el script
 img_dir = os.path.join(script_dir, "1001_images")
-csv_path = "https://raw.githubusercontent.com/jsantonjag/PaintingsAI/refs/heads/main/data/dataset_1001_filas_sin_prefijo.csv"
+csv_path = "https://raw.githubusercontent.com/jsantonjag/PaintingsAI/refs/heads/main/data/dataset_completo.csv"
 
 df = pd.read_csv(csv_path)
 df['path'] = df['path'].apply(lambda x: os.path.join(img_dir, x))
