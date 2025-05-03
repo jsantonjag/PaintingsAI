@@ -3,7 +3,9 @@ El [dataset](dataset_completo.csv) que vamos a usar una combinación del dataset
 * Cuenta con 1.001 cuadros. (Originalmente el dataset tiene 119.527 cuadros)
 * Cada cuadro viene con su respectivo autor y el estilo al que pertenece. 
 
-Además hemos [descargado las imágenes que vienen en el dataset](https://drive.google.com/file/d/1CDSun_v6JqHiDIGe6M4eXxZQ_6aVz1QP/view?usp=drive_link). 
+[Pulsa aquí para acceder a la carpeta zip con las imágenes del dataset](https://drive.google.com/file/d/1CDSun_v6JqHiDIGe6M4eXxZQ_6aVz1QP/view?usp=drive_link). 
+
+Para descargar las imágenes de forma manual, tenéis los comandos en el [archivo 
 
 
 ## **Citación**
