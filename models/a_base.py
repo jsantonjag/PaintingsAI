@@ -107,7 +107,7 @@ criterion_style = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 # 7. Entrenamiento inicial
-n_epochs = 5
+n_epochs = 10
 
 for epoch in range(n_epochs):
     model.train()
