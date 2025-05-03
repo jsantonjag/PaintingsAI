@@ -1,9 +1,9 @@
 ## **Wikiart Dataset (COMPLETE)**
-El [dataset](dataset.csv) que vamos a usar una combinación del dataset WikiArt.
-* Cuenta con 13.766 cuadros. (Originalmente el dataset tiene 119.527 cuadros)
+El [dataset](dataset_completo.csv) que vamos a usar una combinación del dataset WikiArt.
+* Cuenta con 1.001 cuadros. (Originalmente el dataset tiene 119.527 cuadros)
 * Cada cuadro viene con su respectivo autor y el estilo al que pertenece. 
 
-Además hemos [descargado las imágenes que vienen en el dataset](https://drive.google.com/file/d/1pugWjGDA8x9A4n6QsM2zqY-Jp_-FzBFv/view?usp=drive_link). 
+Además hemos [descargado las imágenes que vienen en el dataset](https://drive.google.com/file/d/1CDSun_v6JqHiDIGe6M4eXxZQ_6aVz1QP/view?usp=drive_link). 
 
 
 ## **Citación**
