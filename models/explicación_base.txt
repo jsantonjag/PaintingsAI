@@ -1,0 +1,45 @@
+MultiTaskCNN: convolucional (stride=1, padding=1) y ReLu
+Entrenamiento: running_loss = 0.0
+
+NO: SGD (optimizador), Dropout, Batchnorm.
+
+Se implementa un flujo completo para entrenar una red neuronal convolucional (CNN) multitarea que clasifica imágenes de cuadros según autor y estilo.
+
+Función transform: convierte imágenes a tamaño 128x128 píxeles y a tensores (formato de PyTorch)
+
+Personalización del dataset (ArtDataset):
+* Carga imágenes y etiquetas desde un CSv y la carpeta de imágenes
+* Almacena la ruta de imágenes
+* Crea diccionarios para maèar autorees y estilos a índices
+* __getitem__ : devuelve imagen + índices de autor y estilo como etiquetas.
+
+Carga de datsos:
+* Se divide en 80% entrenamiento y 20% para test
+* Se crean DataLoaders para alimentar los datos al modelo por lotes (batch_size = 16)
+
+Red multitarea (MultiTaskCNN):
+* La red hace 2 predicciones: autor y estilo del cuadro
+* 3 capas convolucionales + ReLu + MaxPooling
+* Aplanado (Flatten) + capa densa compartida (shared_fc)
+* 2 ramas finales (cabezas): un autor y un estilo
+
+Inicialización:
+* Calcula cuántas clases de autor y estilo hay
+* Crea la instancia del modelo
+* Define la función de coste (CrossEntropyyLoss) y el optimizador (Adam)
+
+Entrenamiento:
+* 5 épocas
+* Forward pass
+* Cálculo del coste del autor y del estilo
+* Suma de ambos costes
+* Backpropagation y actualización de los pesos
+
+Evaluación:
+* Cálculo de predicciones sobre el conjunto de prueba
+* Comparación con lass etiquetas reales
+* Precisión (Accuracy) para autor y estilo
+
+
+
+
