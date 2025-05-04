@@ -7,6 +7,7 @@ from torchvision import transforms
 from PIL import Image
 import pandas as pd
 import os
+import matplotlib.pyplot as plt
 
 # 2. Transformaciones
 transform = transforms.Compose([
@@ -38,7 +39,7 @@ class ArtDataset(Dataset):
         style = self.style_to_idx[self.data.iloc[idx]['style']]
         return image, author, style
     
-# Carga del dataset y de la carpeta de imágenes  
+# 4. Cargar datos
 # Obtener la ruta absoluta del directorio donde está el script .py
 script_dir = os.path.dirname(os.path.abspath("1001_images"))
 
@@ -51,8 +52,6 @@ df['path'] = df['path'].apply(lambda x: os.path.join(img_dir, x))
 
 # Mostrar algunas filas
 df.head()
-
-# 4. Cargar datos
 
 full_dataset = ArtDataset(csv_file=csv_path, img_dir=img_dir, transform=transform)
 
@@ -134,6 +133,9 @@ correct_author = 0
 correct_style = 0
 total = 0
 
+author_accuracies = []
+style_accuracies = []
+
 with torch.no_grad():
     for images, authors, styles in test_loader:
         author_preds, style_preds = model(images)
@@ -144,7 +146,26 @@ with torch.no_grad():
         correct_author += (predicted_authors == authors).sum().item()
         correct_style += (predicted_styles == styles).sum().item()
         total += authors.size(0)
+        
+    author_acc = 100 * correct_author / total
+    style_acc = 100 * correct_style / total
+
+    author_accuracies.append(author_acc)
+    style_accuracies.append(style_acc)
 
 print(f'Author Accuracy: {100 * correct_author / total:.2f}%')
 print(f'Style Accuracy: {100 * correct_style / total:.2f}%')
+
+# Gráfico
+plt.figure(figsize=(10, 6))
+plt.plot(range(1, len(author_accuracies)+1), author_accuracies, label='Author Accuracy')
+plt.plot(range(1, len(style_accuracies)+1), style_accuracies, label='Style Accuracy')
+plt.xlabel('Epoch')
+plt.ylabel('Accuracy (%)')
+plt.title('Accuracy por época')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
 
