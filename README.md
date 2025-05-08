@@ -1,5 +1,5 @@
 # 🎨 PaintingsAI
-**Clasificación multitarea de obras de arte usando redes neuronales convolucionales: ** este proyecto trata de predecir el artista y el estilo de una obra artística usando una red neuronal basada en ResNet. 
+**Clasificación multitarea de obras de arte usando redes neuronales convolucionales:** este proyecto trata de predecir el artista y el estilo de una obra artística usando una red neuronal basada en ResNet. 
 
 **Importante:** Este proyecto está realizado con un IDE - Entorno de Desarrollo Integrado compatible con Python (Visual Studio Code)
 
