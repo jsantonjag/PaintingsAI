@@ -12,6 +12,7 @@ PaintingsAI/
 ├── README.md                    <- Resumen del proyecto y guía rápida)
 ├── report.md                    <- Documento técnico explicativo (versión extendida del README)
 ├── final.ipynb                  <- Notebook con el experimento principal
+├── final_resultados_acc.ipynb   <- Notebook con los 4 modelos probados y sus resultados de accuracy
 ├── src/                         <- Código fuente organizado de la solución
 │   ├── dataset.py               <- Clase ArtDataset y transformaciones
 │   ├── model.py                 <- Definición de la ResNet34 (MultiTaskResNet_m) y MultiTaskHeads
