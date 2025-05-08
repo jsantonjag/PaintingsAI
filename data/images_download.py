@@ -11,7 +11,8 @@ from io import BytesIO
 from duckduckgo_search import DDGS
 
 # Cargar el dataset original
-dataset = pd.read_csv("structured_dataset.csv")
+url = "https://raw.githubusercontent.com/jsantonjag/PaintingsAI/refs/heads/main/data/dataset_completo.csv"
+dataset = pd.read_csv(url)
 
 # Carpeta donde se guardarán las imágenes
 output_dir = "dowloaded_images"
