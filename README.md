@@ -57,15 +57,11 @@ cd PaintingsAI
        pip install -r requirements.txt
        ```
 
----
-
    3.2 Instalación manual de dependencias:
    Si no tienes el archivo ["requirements.txt"](requirements.txt), puedes instalar una por una.
    ```bash
    pip install torch torchvision pandas matplotlib pillow
    ```
-
----
 
    3.3 Verificación de la instalación:
    ```bash
