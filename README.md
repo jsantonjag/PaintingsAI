@@ -43,6 +43,7 @@ cd PaintingsAI
 
 3. Instalación previa: (se puede usar o la 3.1 o 3.2)
    3.1 Instalar las librerías desde ["requirements.txt"](requirements.txt):
+   ---
        3.1.1 Crear y activar un entorno virtual (opcional pero recomendable):
        ```bash
        python -m venv venv
