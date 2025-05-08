@@ -1,16 +1,9 @@
 # 🎨 PaintingsAI
 **Clasificación multitarea de obras de arte usando redes neuronales convolucionales.**
 
-Este proyecto aborda el reto de predecir el artista y el estilo de una pintura utilizando una red basada en ResNet. 
+Este proyecto trata de predecir el artista y el estilo de una obra artística usando una red neuronal basada en ResNet. 
 
 **Importante:** Este proyecto está realizado con un IDE - Entorno de Desarrollo Integrado compatible con Python (Visual Studio Code)
-
-## 🛠️ Técnicas empleadas
-* Regularización
-* Balanceo de clases
-* Aumento de datos para mejorar el rendimiento del modelo
-
-**Librerías utilizadas:** Python, Pytorch (torch.nn, torch.optim, torch.utils.data, torchvision,...), pandas, os, PIL, matplotlib.pyplot.
 
 ## 📁 Estructura del proyecto
 ```
@@ -38,11 +31,15 @@ PaintingsAI/
 - Tener [Python 3.8+](https://www.python.org/downloads/) instalado.
 - (Recomendado) Tener `pip` y `virtualenv` configurados.
 
+---
+
 2. Clona el repositorio:
 ```bash
 git clone https://github.com/tu_usuario/PaintingsAI.git
 cd PaintingsAI
 ```
+
+---
 
 3. Instalación previa: (se puede usar o la 3.1 o 3.2)
 3.1 Instalar las librerías desde ["requirements.txt"](requirements.txt):
@@ -58,19 +55,39 @@ cd PaintingsAI
    pip install -r requirements.txt
    ```
 
+---
+
 3.2 Instalación manual de dependencias:
 Si no tienes el archivo ["requirements.txt"](requirements.txt), puedes instalar una por una.
 ```bash
 pip install torch torchvision pandas matplotlib pillow
 ```
 
+---
 
-5. Descarga las imágenes en `data/1001_images` y asegúrate de que el CSV (`dataset_combined.csv`) esté accesible.
+3.3 Verificación de la instalación:
+```bash
+python -c "import torch; import torchvision; import pandas; import matplotlib; from PIL import Image; print('Todo correcto')"
+```
 
-6. Ejecuta el entrenamiento:
+---
+
+4. Descarga las imágenes en [`data/1001_images`](data/README.md) y asegúrate de que el CSV [`dataset_completo.csv`](data/dataset_completo) esté accesible si decides no usar la url.
+
+---
+
+5. Ejecuta el entrenamiento:
 ```bash
 python src/train.py --epochs 20 --batch-size 32 --model resnet34
 ```
+
+## 🛠️ Técnicas empleadas
+* Transfer Learning con ResNet34
+* Arquitectura multitarea
+* Configuración flexible
+* Regularización 
+* Pérdida ponderada 
+* Balanceo de clases
 
 ## 📊 Resultados
 La arquitectura MultiTaskResNet_m (ResNet34 backbone) con balanceo de clases y regularización alcanza más del 60% de precisión en la predicción de artistas y estilos.
