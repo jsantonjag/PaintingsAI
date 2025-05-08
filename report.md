@@ -18,9 +18,10 @@ Se entrena una red convolucional multitarea personalizada, **MultiTaskResNet_m**
 
 | Modelo               | Accuracy Artista | Accuracy Estilo | Observaciones                       |
 |----------------------|------------------|------------------|-------------------------------------|
-| ResNet18 Base        | 52.3%            | 60.1%            | Sin regularización                  |
-| ResNet34 Dropout     | 56.7%            | 63.8%            | dropout=0.4, scheduler              |
-| MultiTaskResNet_m    | 60.2%            | 65.5%            | Balanceo, dropout, heads separadas  |
+| MultiTaskResNet (ResNet18 Base)        | 2.99%            | 16.92%            | Primera versión básica multitarea                  |
+| MultiTaskResNet_1 (ResNet18 Dropout)     | 4.48%            | 25.37%            | Con BatchNorm, dropout=0.4, scheduler, activación              |
+| MultiTaskResNet_34 (ResNet34 Dropout)  | 3.48%            | 17.91%            | Más capas, arquitectura más profunda, dropout=0.4 |
+| MultiTaskResNet_m (ResNet34 mejorada)   | 16.92%            | 22.39%            | Mejoras: Balanceo, dropout=0.2, heads separadas  |
 
 ## 4. Estado del Arte
 - Uso de **transfer learning** en modelos como ResNet y EfficientNet [1]
