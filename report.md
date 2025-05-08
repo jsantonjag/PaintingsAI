@@ -16,7 +16,18 @@ Se entrena una red convolucional multitarea personalizada, **MultiTaskResNet_m**
 
 ## 3. Resultados
 
-| Modelo               | Accuracy Test Artista | Accuracy Test Estilo | Observaciones                       |
+### 3.1 Train Accuracy por modelo
+
+| Modelo               | Accuracy Artista | Accuracy Estilo | Observaciones                       |
+|----------------------|------------------|------------------|-------------------------------------|
+| MultiTaskResNet (ResNet18 Base)        | 3.05%            | 17.16%            | Primera versión básica multitarea                  |
+| MultiTaskResNet_1 (ResNet18 Dropout)     | 6.55%            | 22.14%            | Con BatchNorm, dropout=0.4, scheduler, activación              |
+| MultiTaskResNet_34 (ResNet34 Dropout)  | 3.50%            | 16.33%            | Más capas, arquitectura más profunda, dropout=0.4 |
+| MultiTaskResNet_m (ResNet34 mejorada)   | 52.46%            | 60.43%            | Mejoras: Balanceo, dropout=0.2, heads separadas  |
+
+### 3.2 Test Accuracy por modelo
+
+| Modelo               | Accuracy Artista | Accuracy Estilo | Observaciones                       |
 |----------------------|------------------|------------------|-------------------------------------|
 | MultiTaskResNet (ResNet18 Base)        | 2.99%            | 16.92%            | Primera versión básica multitarea                  |
 | MultiTaskResNet_1 (ResNet18 Dropout)     | 4.48%            | 25.37%            | Con BatchNorm, dropout=0.4, scheduler, activación              |
