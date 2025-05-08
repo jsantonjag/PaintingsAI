@@ -7,6 +7,13 @@ El [dataset](dataset_completo.csv) que vamos a usar una combinación del dataset
 
 Para descargar las imágenes de forma manual, tenéis los comandos en el [archivo images_download.py](images_download.py). 
 
+## **Necesario**
+Para ejecutar los entrenamientos y el trabajo en sí es necesario tener en el mismo espacio de ejecución lo siguiente:
+* Carpeta descomprimida de las imágenes ([Pulsa aquí para acceder a la carpeta zip con las imágenes del dataset](https://drive.google.com/file/d/1CDSun_v6JqHiDIGe6M4eXxZQ_6aVz1QP/view?usp=drive_link))
+
+Partes opcionales:
+* [Dataset_completo](dataset_completo.csv) , el propio código coge la url del dataset (enlace a este repositorio de Github)
+* [Filtered_dataset](filtered_dataset.csv), el propio código crea el archivo csv, no es necesario tenerlo.
 
 ## **Citación**
 @article{artgan2018,
